@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rust Web Server with Askama</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            max-width: 400px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h1, h2 {
+            color: #007bff;
+        }
+
+        .featured {
+            color: #28a745;
+        }
+
+        .item-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .item-list li {
+            margin-bottom: 10px;
+            padding: 10px;
+            background-color: #f8f9fa;
+            border-radius: 5px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>{{ message }}</h1>
+
+        <h2>Conditional Rendering:</h2>
+        {% if is_featured %}
+            <p class="featured">This item is featured!</p>
+        {% else %}
+            <p>This item is not featured.</p>
+        {% endif %}
+
+        <h2>Looping:</h2>
+        <ul class="item-list">
+            {% for item in items %}
+                <li>{{ item }}</li>
+            {% endfor %}
+        </ul>
+
+        <h2>Template Inheritance:</h2>
+        <p>This is content from the base template.</p>
+        {% block additional_content %}
+        <p>This is additional content specific to this template.</p>
+        {% endblock %}
+
+        <h2>Button Example:</h2>
+        <a href="yelp.html" class="btn">Go to Yelp</a>
+    </div>
+</body>
+</html>
