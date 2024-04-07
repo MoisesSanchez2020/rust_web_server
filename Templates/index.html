@@ -7,18 +7,14 @@
     <style>
         body {
             font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
             margin: 0;
             padding: 0;
-            background-color: #f0f0f0;
-            color: #333;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
         }
 
         .container {
-            max-width: 400px;
+            max-width: 800px;
+            margin: 0 auto;
             padding: 20px;
             background-color: #fff;
             border-radius: 10px;
@@ -64,6 +60,12 @@
 <body>
     <div class="container">
         <h1>{{ message }}</h1>
+        
+
+        <h2>JSON Data:</h2>
+        <pre>
+            {{ json_data }}
+        </pre>
 
         <h2>Conditional Rendering:</h2>
         {% if is_featured %}
