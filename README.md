@@ -4,7 +4,7 @@ As a software engineer eager to expand my skill set and deepen my understanding 
 
 My purpose in writing this software was twofold: to solidify my understanding of Rust syntax and concepts, and to create a tangible project that highlights my abilities as a Rust developer. Through this project, I aimed to demonstrate my proficiency in Rust and showcase my ability to write clean, efficient, and idiomatic Rust code.
 
-[Software Demo Video](http://youtube.link.goes.here)
+[Software Demo Video](https://youtu.be/UatZpp_psb8)
 
 # Development Environment
 

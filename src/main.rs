@@ -22,7 +22,7 @@ struct IndexTemplate {
 // Define yelp function to make a request to Yelp API
 async fn yelp() -> impl Responder {
     let client = Client::new(); // Create a new reqwest client
-    let api_key = env::var("YELP_API_KEY").unwrap_or_else(|_| "Your_API_Key_Here".to_string()); // Get Yelp API key from environment variables
+    let api_key = env::var("YELP_API_KEY").unwrap_or_else(|_| "Ek8zOvr4GbmeYX5mIVVuxEIcd9Xphhcm_KujQv_yiZsvB9ZcjSJ-XRlKqw0v0YHXuaUFZN25M7mvuSt6NHS644Af9cBrhSiAF5BtncZPZTvOvoXQCuogcMmU2DFEZXYx".to_string()); // Get Yelp API key from environment variables
     let response = client.get("https://api.yelp.com/v3/businesses/search") // Send GET request to Yelp API
         .header("Authorization", format!("Bearer {}", api_key)) // Add Authorization header with API key
         .query(&[("location", "San Mateo"), ("term", "restaurants")]) // Add query parameters
